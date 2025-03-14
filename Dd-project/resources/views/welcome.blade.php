@@ -20,6 +20,9 @@
          @vite(['resources/css/app.css'])
     </head>
     <body class="antialiased">
+        <div class="message">
+            <a href="https://t.me/Singhal_Anurag" target="_blank"><i class='bx bxl-telegram'></i></a>
+        </div>
         @include("includes.nav")
             {{-- @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
