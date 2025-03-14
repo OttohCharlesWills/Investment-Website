@@ -1,0 +1,637 @@
+.nav-flex{
+    display: flex;
+}
+
+.nav-link{
+    /* font-size: 1rem; */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-link:hover{
+    color: gold;
+}
+
+.navbar {
+    padding: 0;
+    position: fixed;
+    /* top: -70px; Initially hidden above the viewport
+    left: 0; */
+    width: 100%;
+    z-index: 1030;
+    transition: top 0.4s ease-in-out; /* Smooth slide-in effect */
+}
+
+.navbar.show {
+    top: 0; /* Slide down when class 'show' is added */
+}
+
+/* body {
+    padding-top: 60px; Adjust to prevent content from being hidden behind navbar
+} */
+
+.log-span{ 
+    display: flex;
+    gap: .4rem;
+    margin-top: .5rem;
+}
+
+.log-span a{
+    color: #0d6efd;
+}
+
+.log-span a:hover{
+    color: #0d6efd;
+}
+
+
+
+
+
+/******************* FOR TEMPORARY NAVBAR **********************/
+
+.hero-container{
+    height: 100vh;
+    background: url(bitcoin.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/* .temporary-navbar {
+    width: 100%;
+    background: #ffffff; White background
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); Soft shadow 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+} */
+
+.logo img {
+    height: 60px; /* Adjust size as needed */
+    border-radius: 50px;
+}
+
+.tem-nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.tem-nav-links ul li {
+    display: inline-block;
+}
+
+.tem-nav-links ul li a {
+    text-decoration: none;
+    color: white; /* Dark text */
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.tem-nav-links ul li a:hover {
+    /* color: #007bff; Blue hover effect */
+    color: gold;
+}
+
+.hero-content{
+    color: white;
+}
+
+.hero-content div{
+    padding-top: 6rem;
+    margin: 0 3rem;
+    text-align: right;
+}
+
+.hero-content div h1{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
+.typed-cursor{
+    display: none;
+}
+
+
+
+
+
+
+
+/*********************** FOR JOIN **************************/
+
+.join{
+    padding: 4rem 0;
+}
+
+.join-h2{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.join-steps{
+    padding: 2rem 0;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.join-steps .line, .line2{
+    position: absolute;
+}
+
+.join-steps .line{
+    margin-top: 5rem;
+    left: 28%;
+}
+
+.join-steps .line2{
+    margin-top: 5rem;
+    left: 62%;
+}
+
+.join-steps div{
+    justify-self: center;
+    padding: 2rem 3rem;
+    text-align: center;
+    width: 100%;
+    /* background-color: white; */
+    /* box-shadow: 0 0 20px rgba(48, 46, 77, 0.15); */
+}
+
+.join-steps div img{
+    width: 100px;
+}
+
+
+
+
+/************* FOR ABOUT ************/
+
+
+.tabContents{
+    display: none;
+}
+
+
+.active-content{
+    display: block;
+}
+
+.about {
+    padding: 50px 10%;
+    background: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5rem;
+    position: relative; /* Needed for absolute tabContents */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 1;
+    position: relative; /* Makes tab contents absolute inside it */
+    min-height: 200px; /* Ensures stable height */
+}
+
+.about-text h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-text h3 {
+    font-size: 18px;
+    color: #666;
+    padding-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.tabTitle {
+    margin-top: 20px;
+}
+
+.tabLinks {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.tabLinks:hover, .tabLinks.active {
+    background: #0056b3;
+}
+
+/* Ensure all tabContents take up same space */
+.tabContents {
+    position: absolute;
+    top: 370px; /* Adjust based on layout */
+    left: -10px;
+    width: 40vw;
+    min-height: 100px; /* Keeps height stable */
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tabContents.active-content {
+    display: block;
+    opacity: 1;
+}
+
+.tabContents h4 {
+    font-size: 20px;
+    color: #444;
+    /* background: #fff; */
+    padding: 15px;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+
+
+
+
+
+
+
+
+/*************************** FOR PLANS *****************************/
+
+.plan-container{
+    background: rgba(2, 0, 36, 1);
+    padding: 5rem 0;
+}
+
+.plan-package{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin: 0 3rem;
+    gap: 20px;
+}
+
+.plan-pack-content{
+    flex: 0 0 23.7%;
+    text-align: center;
+    padding: 3rem 1rem;
+    height: auto;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(47, 45, 45, 1) 35%);
+}
+
+.plan-h1{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.pack-head h1{
+    font-size: 1.3rem;
+}
+
+.pack-head h5{
+    color: #18FFFF;
+}
+
+.pack-head span{
+    display: inline-block;
+    width: 30%;
+    height: 2px;
+    background-color: #18FFFF;
+    color: #18FFFF;
+}
+
+.pack-body{
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.pack-link{
+    padding-top: 2rem;
+}
+
+.pack-link a{
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: white;
+    color: #18FFFF;
+}
+
+
+
+
+
+
+/* FOR PERFORMANCE */
+
+.perform{
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.perform-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.perform-left{
+    flex: 0 0 70%;
+    align-items: center;
+    justify-self: center;
+}
+
+.left-top-con .left-icon , .left-bottom-con .left-icon{
+    background: linear-gradient(180deg, #034fab 0%, #064aa8 4.58%, #202a95 44.13%, #30178a 77.34%, #361086 100%);
+    padding: 1.3rem 1.5rem;
+    border-radius: 50px;
+}
+
+.left-top-con .left-icon i, .left-bottom-con .left-icon i{
+    color: white;
+    font-size: 3rem;
+}
+
+.left-top-con div p, .left-bottom-con div p{
+    width: 70%;
+}
+
+.perform-right{
+    flex: 0 0 30%;
+}
+
+.perform-right h1{
+    font-weight: bold;
+}
+
+.perform-right p{
+    width: 70%;
+}
+
+.left-top{
+    padding-bottom: 4rem;
+}
+
+.left-top, .left-bottom{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.left-top .left-top-con, .left-bottom-con{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+
+
+/******************** FOR PAYMENT *******************/
+.payment{
+    padding: 3rem 0;
+}
+
+.payment-h1{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.payment-h1 h1{
+    font-weight: bold;
+}
+
+.payment-h1 p{
+    color: #0bb6b6;
+    font-weight: 700;
+}
+
+.payment-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.payment-options div{
+    color: #139b9b;
+    font-weight: bold;
+    text-align: center;
+    flex: 0 0 20%;
+    padding: 2rem 0rem;
+    font-size: 2rem;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************** FOR DASHBOARD **************************/
+
+.navbar-expand-md .navbar-nav.ms-auto {
+    margin-left: 0 !important;
+}
+
+.regel{
+    padding-top: 4rem;
+}
+
+.log-message{
+    padding: 0;
+    height: 0;
+}
+
+
+.message-body{
+    position: absolute;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #30178a;
+    padding: 4px 12px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    color: white;
+}
+
+.drop-nav{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .6rem;
+}
+
+.home-dash{
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.dropdown-toggle{
+    display: flex !important;
+    justify-content: right;
+}
+
+.dropdown-toggle::after{
+    margin-top: 10px;
+}
+
+.home-other{
+    display: flex;
+    gap: 1rem;
+}
+
+.home-other a{
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.con-nav{
+    padding: 0 !important;
+}
+
+
+
+/******************** FOR DASHBOARD HERO *****************/
+.hero-head{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.head-pay{
+    display: flex;
+    gap: 1rem;
+}
+
+.head-pay a{
+    align-self: center;
+    text-decoration: none;
+    padding: .5rem .8rem;
+    color: white;
+    border-radius: 7px;
+    background-color: red;
+}
+
+.head-pay a:first-child{
+    background-color: #007bff;
+}
+
+
+
+
+
+/* Responsive for smaller screens */
+@media (max-width: 767px) {
+    .nav-flex{
+        flex-direction: column;
+    }
+
+    /* .temporary-navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .tem-nav-links ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .tem-nav-links ul li {
+        display: block;
+        flex: 0 0 25%;
+    } */
+
+
+    /* FOR JOIN */
+    .join-steps .line, .line2{
+        display: none;
+    }
+
+    .join-steps{
+        flex-direction: column;
+    }
+
+
+
+
+    /* FOR PLAN */
+    .plan-package{
+        margin: 0 1rem;
+    }
+
+    .plan-pack-content{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
+}
