@@ -60,8 +60,8 @@
                             <a class="nav-link" href="{{url('/terms')}}"><i class='bx bxs-file-doc'></i> Terms</a>
                             <a class="nav-link" href=""><i class='bx bxs-package'></i> View Packages</a>
                             <a class="nav-link" href=""><i class='bx bx-user-voice'></i> Referals</a>
-                            <a class="nav-link" href=""><i class='bx bxs-wallet' ></i> Deposit</a>
-                            <a class="nav-link" href=""><i class='bx bx-money'></i> Withdraw</a>
+                            <a class="nav-link" href="{{url('/wallet')}}"><i class='bx bxs-wallet' ></i> Deposit</a>
+                            <a class="nav-link" href="{{url('/crypto-market')}}"><i class='bx bx-money'></i> Withdraw</a>
                             <a class="nav-link" href=""><i class='bx bx-timer'></i> History</a>
                         </div>
                     </li>

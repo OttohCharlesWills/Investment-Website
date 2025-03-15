@@ -1,5 +1,6 @@
 .message {
     position: fixed;
+    z-index: 100;
     bottom: 20px;
     left: 20px;
     background-color: #0088cc; /* Telegram blue */
@@ -610,6 +611,96 @@
 }
 
 
+/*************** FOR FOOTER *************/
+.footer{
+    padding-top: 3rem;
+    background-color: #222;
+    color: white;
+}
+
+.footer h5{
+    text-align: center;
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+.footer-container{
+    margin: 0 2rem;
+    display: flex;
+    padding: 2rem 0;
+    gap: 6rem;
+    flex-wrap: wrap;
+}
+
+.first-section{
+    flex: 0 0 30%;
+}
+
+.first-section p{
+    font-size: 1rem;
+}
+
+.second-section{
+    flex: 0 0 25%;
+}
+
+.second-section li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.second-section li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    transition: all ease .7s;
+}
+
+.second-section li a:hover{
+    color: #de9f17;
+}
+
+.second-section span{
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background: linear-gradient(90deg, #de9f17 0%, #d19c15 33%, #fff58a 67%, #ffd147 100%);
+    color: #18FFFF;
+}
+
+.third-section{
+    flex: 0 0 25%;
+}
+
+.third-section li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    transition: all ease .7s;
+}
+
+.third-section li a:hover{
+    color: #de9f17;
+}
+
+.third-section span{
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background: linear-gradient(90deg, #de9f17 0%, #d19c15 33%, #fff58a 67%, #ffd147 100%);
+    color: #18FFFF;
+}
+
+.third-section li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
 
 
 
@@ -618,6 +709,84 @@
     .nav-flex{
         flex-direction: column;
     }
+
+    /********* FOR HERO ************/
+
+    .hero-content div{
+        padding-top: 11rem;
+    }
+
+    .hero-container{
+        background: url(bitcoin1.jpg) no-repeat center center;
+    }
+
+    /************* FOR ABOUT *************/
+
+    .about-container{
+        flex-direction: column;
+        height: 150vh;
+    }
+
+    .tabContents{
+        top: 530px;
+        width: 100%;
+    }
+
+
+    /* FOR PERFORM */
+    .perform-left {
+        flex: 0 0 100%;
+    }
+
+    .left-top{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-top-con, .left-bottom-con{
+        flex-direction: column;
+    }
+
+    .left-top-con div, .left-bottom-con div{
+        text-align: center;
+    }
+
+    .left-top-con div p, .left-bottom-con div p{
+        width: 100%;
+    }
+
+    .left-bottom{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .perform-right {
+        flex: 0 0 100%;
+        margin-top: 1rem;
+        padding: 0 2rem;
+    }
+
+    .perform-right p {
+        width: 100%;
+    }
+
+    .payment-options div {
+        flex: 0 0 80%;
+    }
+
+    /*************** FOR FOOTER ************/
+    .first-section{
+        flex: 0 0 100%;
+    }
+
+    .second-section{
+        flex: 0 0 35%;
+    }
+
+    .third-section{
+        flex: 0 0 30%;
+    }
+
 
     /* .temporary-navbar {
         flex-direction: column;

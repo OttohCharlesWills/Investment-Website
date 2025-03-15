@@ -12,18 +12,16 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('personal_access_tokens', function (Blueprint $table) {
-            $table->id();
-            $table->morphs('tokenable');
-            $table->string('name');
-            $table->string('token', 64)->unique();
-            $table->text('abilities')->nullable();
-            $table->timestamp('last_used_at')->nullable();
-            $table->timestamp('expires_at')->nullable();
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('transactions', function (Blueprint $table) {
+        $table->id();
+        $table->string('tx_hash')->unique();
+        $table->string('sender');
+        $table->string('amount');
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.
