@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Controllers\WalletController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\CryptoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +22,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::view('/about', 'about.about');
+Route::view('/terms', 'dashboardLinks.terms');
+Route::view('/payment', 'dashboardLinks.payment');
+Route::view('/wallet', 'dashboardLinks.wallet');
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::post('/deposit', [WalletController::class, 'deposit'])->name('wallet.deposit');
+    Route::post('/withdraw', [WalletController::class, 'requestWithdrawal'])->name('wallet.withdraw');
+    Route::post('/approve-withdrawal/{id}', [WalletController::class, 'approveWithdrawal'])->name('wallet.approve');
+});
+
+
+Route::post('/save-transaction', [PaymentController::class, 'saveTransaction'])->name('save.transaction');
+
+
+Route::get('/home', [CryptoController::class, 'getMarketTrends'])->name('home');
+
+
 
 
