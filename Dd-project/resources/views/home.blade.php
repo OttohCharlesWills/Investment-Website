@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-@extends('layouts.app')
-
-@vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
-@section('content')
-<div class="home-container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="">
-                {{-- <div class="card-header">{{ __('Dashboard') }}</div> --}}
-=======
-
     @extends('layouts.app')
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
     @section('content')
@@ -21,7 +9,6 @@
             <div class="col-md-8">
                 <div class="">
                     {{-- <div class="card-header">{{ __('Dashboard') }}</div> --}}
->>>>>>> e02e1195af6c5ec4a479ed0b5edd3d6cc35202b3
 
                     <div class="log-message">
                         @if (session('status'))

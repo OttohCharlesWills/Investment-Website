@@ -15,13 +15,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-<<<<<<< HEAD
-=======
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
     <!-- Scripts -->
->>>>>>> e02e1195af6c5ec4a479ed0b5edd3d6cc35202b3
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <style>
