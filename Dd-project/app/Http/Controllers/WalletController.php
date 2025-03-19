@@ -58,7 +58,7 @@ class WalletController extends Controller
 
         // Simulate sending crypto (manually process on MetaMask)
         DB::table('wallet_transactions')->where('id', $id)->update([
-            'status' => 'completed',
+             'status' => 'completed',
             'transaction_hash' => '0x' . bin2hex(random_bytes(20)) // Fake hash for now
         ]);
 
