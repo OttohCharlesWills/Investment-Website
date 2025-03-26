@@ -103,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="chart-container">
             <h2 class="market">Market Trends</h2>
             <table>
                 <thead>

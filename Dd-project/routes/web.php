@@ -1,8 +1,8 @@
 <?php
-use App\Http\Controllers\WalletController;
-use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\CryptoController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\PaymentPlanController;
+use App\Http\Controllers\PaymentProofController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,17 +24,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/invest', 'dashboardLinks.terms');
+Route::view('/plans', 'dashboardLinks.payment');
+Route::view('/withdraw', 'dashboardLinks.wallet');
 Route::view('/terms', 'dashboardLinks.terms');
-Route::view('/payment', 'dashboardLinks.payment');
-Route::view('/wallet', 'dashboardLinks.wallet');
+Route::view('/deposit', 'dashboardLinks.deposit');
+
+
+Route::get('/payment/{method}', [PaymentPlanController::class, 'showPaymentPage']);
+Route::post('/payment-proof', [PaymentProofController::class, 'store'])->name('payment.proof');
 
 
 
-Route::middleware('auth')->group(function () {
-    Route::post('/deposit', [WalletController::class, 'deposit'])->name('wallet.deposit');
-    Route::post('/withdraw', [WalletController::class, 'requestWithdrawal'])->name('wallet.withdraw');
-    Route::post('/approve-withdrawal/{id}', [WalletController::class, 'approveWithdrawal'])->name('wallet.approve');
-});
+Route::put('/admin/confirm-proof/{id}', [AdminController::class, 'confirmProof'])->name('admin.confirm-proof');
 
 
 // Admin Routes
@@ -53,9 +55,6 @@ Route::prefix('admin')->middleware('auth', 'isAdmin')->group( function() {
     // Route::get('/api_manegement', [AdminController::class, 'api_manegement']);
     // Route::delete('/help-delete/{help_id}', [AdminController::class, 'help_delete']);
 });
-
-
-Route::post('/save-transaction', [PaymentController::class, 'saveTransaction'])->name('save.transaction');
 
 
 Route::get('/home', [CryptoController::class, 'getMarketTrends'])->name('home');

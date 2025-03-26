@@ -58,11 +58,10 @@
                         <div class="home-other">
                             <a class="home-dash nav-link" href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><i class='bx bxs-dashboard'></i> Dashboard</a>
                             <a class="nav-link" href="{{url('/terms')}}"><i class='bx bxs-file-doc'></i> Terms</a>
-                            <a class="nav-link" href=""><i class='bx bxs-package'></i> View Packages</a>
-                            <a class="nav-link" href=""><i class='bx bx-user-voice'></i> Referals</a>
-                            <a class="nav-link" href="{{url('/wallet')}}"><i class='bx bxs-wallet' ></i> Deposit</a>
-                            <a class="nav-link" href="{{url('/crypto-market')}}"><i class='bx bx-money'></i> Withdraw</a>
-                            <a class="nav-link" href=""><i class='bx bx-timer'></i> History</a>
+                            <a class="nav-link" href="{{url('/plans')}}"><i class='bx bxs-package'></i> View Packages</a>
+                            {{-- <a class="nav-link" href=""><i class='bx bx-user-voice'></i> Referals</a> --}}
+                            <a class="nav-link" href="{{url('/deposit')}}"><i class='bx bxs-wallet' ></i> Deposit</a>
+                            <a class="nav-link" href="{{url('/withdraw')}}"><i class='bx bx-money'></i> Withdraw</a>
                         </div>
                     </li>
                 @endguest
